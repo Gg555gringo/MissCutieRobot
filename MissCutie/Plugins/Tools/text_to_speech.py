@@ -25,7 +25,7 @@ def gtts(update, context):
         for x in "\n":
             reply = reply.replace(x, "")
     try:
-        tts = gTTS(reply, lang='en', tld='co.in')
+        tts = gTTS(reply, lang='pt', tld='co.in')
         tts.save("k.mp3")
         with open("k.mp3", "rb") as speech:
             msg.reply_audio(speech)
