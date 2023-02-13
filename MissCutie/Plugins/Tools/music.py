@@ -31,13 +31,13 @@ def music(update: Update, context: CallbackContext):
     args = message.text.split(" ", 1)
 
     if len(args) == 1:
-        message.reply_text('Provide Song Name also like `/song on my way`!')
+        message.reply_text('Forneça o nome da música também como `/song Rap Do Denji`!')
         return
     urlissed = args[1]
 
     pablo = bot.send_message(
         chat.id, textwrap.dedent(
-            f"`Getting {urlissed} From Youtube Servers. Please Wait.`")
+            f"`Pesquisando {urlissed} Dos servidores do Youtube. Por favor, aguarde.`")
     )
 
     search = SearchVideos(f"{urlissed}", offset=1, mode="dict", max_results=1)
@@ -91,7 +91,7 @@ def music(update: Update, context: CallbackContext):
         return
     c_time = time.time()
     capy = textwrap.dedent(
-        f"*Song Name :* `{thum}` \n*Requested For :* `{urlissed}` \n*Channel :* `{thums}` \n*Link :* `{mo}`")
+        f"*Nome Da Musica :* `{thum}` \n*Pesquisado por :* `{urlissed}` \n*Canal :* `{thums}` \n*Link :* `{mo}`")
     file_stark = f"{ytdl_data['id']}.mp3"
     bot.send_audio(
         chat.id,
