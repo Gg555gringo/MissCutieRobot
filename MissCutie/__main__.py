@@ -202,8 +202,8 @@ def start(update: Update, context: CallbackContext):
                     text="SUPPORT", 
                     url=f"https://t.me/{SUPPORT_CHAT}"),
                 InlineKeyboardButton(
-                    text="DEVELOPER", 
-                    url=f"https://t.me/PrinceXofficial")
+                    text="🍷DEVELOPER", 
+                    url=f"https://t.me/gringomdz")
 
             ],
 
@@ -225,26 +225,26 @@ def misscutie_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "misscutie_":
         query.message.edit_text(
-            text="""Hello *{}*, I'm *{}*. A Powerful Telegram Group Management Bot built to help you manage Group easily.
-            \n ‣ I can Restrict Users.
-            \n ‣ I can Greet Users with customizable welcome message and even set a group rules
-            \n ‣ I have an advanced Anti-Flood System which will help you to safe group from Spammmer.
-            \n ‣ I can Warn Users until they reach max Warns, with each predefined actions such as Ban, Mute and Kick etc.
-            \n ‣ I have Note Keeping System, Blacklists, And even Predetermined replies on certain keywords.
-            \n ‣ I check Admins Permissions before perform any Command and more Stuffs.
-            \n ‣ I have an advanced Artificial Chatbot System, so can talk with users like humans.
-            \n\n*If you have any Question, You can join Support Chat. My Developer Team will Answer. Check Link Below*""".format(
+            text="""Hello *{}*, I'm *{}*.Um poderoso bot de gerenciamento de grupos de telegramas criado para ajudá-lo a gerenciar grupos facilmente. 
+            \n ‣ Posso Restringir Usuários. 
+            \n ‣ Posso cumprimentar os usuários com uma mensagem de boas-vindas personalizável e até definir regras de grupo 
+            \n ‣ Eu tenho um sistema anti-flood avançado que ajudará você a proteger o grupo do Spammmer .
+            \n ‣ Posso avisar os usuários até atingirem o máximo de alertas, com cada ação predefinida, como banir, silenciar e chutar, etc. 
+            \n ‣ Eu tenho um sistema de anotações, listas negras e até respostas predeterminadas para determinadas palavras-chave. 
+            \n ‣ Eu verifico as permissões de administrador antes de executar qualquer comando e mais coisas. 
+            \n ‣ Eu tenho um sistema de chatbot artificial avançado, então posso falar com usuários como humanos.
+            \n\n*Se você tiver alguma dúvida, pode entrar no bate-papo de suporte. Minha equipe de desenvolvedores responderá. Confira o link abaixo*""".format(
                         escape_markdown(first_name), escape_markdown(context.bot.first_name)),
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                    [
-                     InlineKeyboardButton(text="Support", url="t.me/MissCutie_Support"),
-                     InlineKeyboardButton(text="News", url="t.me/MissCutieUpdates"),
+                     InlineKeyboardButton(text="Suporte", url="t.me/gringomdz"),
+                     InlineKeyboardButton(text="Novidades", url="t.me/mdzup"),
                    ],
                    [
-                    InlineKeyboardButton(text="Back", callback_data="misscutie_back")
+                    InlineKeyboardButton(text="Voltar", callback_data="misscutie_back")
                    ]
                 ]
             ),
@@ -256,7 +256,7 @@ def misscutie_about_callback(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup([
     [
         InlineKeyboardButton(
-            text="➕️ Add me to your chat ➕️", url=f"https://t.me/{context.bot.username}?startgroup=true"),
+            text="➕️ Adicione-me ao seu chat  ➕️", url=f"https://t.me/{context.bot.username}?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="Admin", callback_data="admin_back"),
@@ -271,7 +271,7 @@ def misscutie_about_callback(update: Update, context: CallbackContext):
         ),
     ],
     [
-        InlineKeyboardButton(text="Helps & Commands❔", callback_data="help_back"),
+        InlineKeyboardButton(text="Help & Commands❔", callback_data="help_back"),
     ],
 ]),
                 parse_mode=ParseMode.MARKDOWN,
@@ -284,7 +284,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            stringz = "My dear Owner , I'm Working Again. Thanks to make me live."
+            stringz = "Meu caro proprietário, estou trabalhando novamente. Obrigado por me fazer viver."
             dispatcher.bot.sendMessage(f"@{OWNER_ID}", stringz)
         except Unauthorized:
             LOGGER.warning(

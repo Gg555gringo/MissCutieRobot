@@ -10,10 +10,10 @@ from telegram.ext.dispatcher import DispatcherHandlerStop
 from os.path import isfile
 
 
-HELP_STRINGS = """Hey there! My name is *{}*.
-I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of the things I can help you with. """.format(
+HELP_STRINGS = """Ei! Meu nome é *{}*.
+Sou um bot de gerenciamento de grupo modular com alguns extras divertidos! Dê uma olhada no seguinte para ter uma ideia de algumas das coisas com as quais posso ajudá-lo. """.format(
     dispatcher.bot.first_name,
-    "\nAll commands can either be used with / or !.\n" if ALLOW_EXCL else "",
+    "\nTodos os comandos podem ser usados com / ou  !.\n" if ALLOW_EXCL else "",
 )
 
 IMPORTED = {}
